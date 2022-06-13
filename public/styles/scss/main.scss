@@ -259,6 +259,7 @@ body {
     * {
       color: white;
     }
+    overflow: hidden;
     .inner-section-wrapper {
       padding: 66px 54px;
       nav {
@@ -266,6 +267,13 @@ body {
           font-size: 28px;
           font-weight: bold;
         }
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding-top: 83px;
       }
     }
   }
@@ -275,17 +283,47 @@ body {
       color: $effectColor;
     }
     .inner-section-wrapper {
-      padding: 78px 54px;
+      padding: 78px 0 20px 54px;
       nav {
+        padding-bottom: 69px;
         h3 {
           font-size: 28px;
           font-weight: bold;
         }
       }
       .main {
+        display: flex;
+        justify-content: space-between;
         h1 {
           font: normal normal bold 85px/146px Wallop;
           line-height: 1.4;
+        }
+        .right-side {
+          max-width: 676px;
+          .bottom {
+            display: flex;
+            margin-top: 29px;
+            &>div{
+              &:first-child{
+                max-width: 402px;
+                width: 100%;
+                padding-right: 10px;
+              }
+              &:last-child{
+                display: flex;
+                align-items: flex-start;
+                span{
+                  padding-left: 12px;
+                }
+                img{
+                  display: block;
+                  width: 40px;
+                  height: 40px;
+
+                }
+              }
+            }
+          }
         }
       }
     }
