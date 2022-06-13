@@ -1,0 +1,32 @@
+let powder = document.querySelector("section#powder");
+$(document).ready(function () {
+  let owl = $(".owl-carousel").owlCarousel({
+    items: 1,
+    stagePadding: 250,
+    center: true,
+    startPosition: 1,
+    loop: true,
+    nav: true,
+    
+    navText: ["<img src='./public/imgs/carousel/arrow-left.svg'>","<img src='./public/imgs/carousel/arrow-right.svg'>"]
+  });
+  owl.on("changed.owl.carousel", function (event) {
+    switch (event.page.index) {
+      case 0:
+        powder.className = "";
+        powder.classList.add("orange");
+        break;
+      case 1:
+        powder.className = "";
+        powder.classList.add("kiwi");
+        break;
+      case 2:
+        powder.className = "";
+        powder.classList.add("raspberry");
+        break;
+
+      default:
+        break;
+    }
+  });
+});

@@ -1,0 +1,292 @@
+@import "./helpers/style-helper.scss";
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+* {
+  font-family: Wallop;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  section {
+    height: 100vh;
+  }
+  #home {
+    background-color: $homeBackground;
+    * {
+      color: $homeColor;
+    }
+    .inner-section-wrapper {
+      padding: 30px 54px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+      nav {
+        display: flex;
+        justify-content: space-between;
+      }
+      .main {
+        text-align: center;
+        h1 {
+          font: normal normal bold 280px/357px Wallop;
+        }
+      }
+    }
+  }
+  .section-divider {
+    font-weight: bold;
+    font-size: 55px;
+    background-color: $footerBackground;
+    color: white;
+    height: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    .parallax-text {
+      position: absolute;
+      &#firstTitle {
+        top: 30px;
+        left: 100%;
+      }
+      &#secondTitle {
+        bottom: 30px;
+        right: 100%;
+      }
+    }
+  }
+  #powder {
+    transition: 0.3s all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &.orange {
+      background-color: $powderOrangeBackground;
+      * {
+        color: $powderOrangeColor;
+      }
+    }
+    &.kiwi {
+      background-color: $powderKiwiBackground;
+      * {
+        color: $powderKiwiColor;
+      }
+    }
+    &.raspberry {
+      background-color: $powderRaspberryBackground;
+      * {
+        color: $powderRaspberryColor;
+      }
+    }
+    .inner-section-wrapper {
+      padding: 74px 54px;
+      width: 100%;
+      .carousel-wrapper {
+        max-width: 1172px;
+        margin: auto;
+      }
+      nav {
+        h3 {
+          font-size: 28px;
+          font-weight: bold;
+        }
+      }
+      .owl-carousel {
+        .owl-stage-outer {
+          overflow: initial;
+        }
+        .owl-item {
+          &.active {
+            .item {
+              h2 {
+                opacity: 1;
+              }
+              img {
+                transform: scale(1.5);
+              }
+            }
+          }
+          .item {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            h2 {
+              opacity: 0;
+              transition: 0.3s opacity;
+              transition-delay: 0.3s;
+              position: absolute;
+              bottom: -80px;
+              font-size: 65px;
+              span {
+                display: block;
+                position: relative;
+              }
+            }
+            &.kiwi {
+              h2 {
+                bottom: -242px;
+                left: 50%;
+                transform: translateX(-57%);
+                span {
+                  &:first-child {
+                    transform: rotate(353deg);
+                    left: -50px;
+                  }
+                  &:nth-child(2) {
+                    transform: rotate(15deg);
+                    left: 236px;
+                    top: -51px;
+                  }
+                  &:last-child {
+                    transform: rotate(7deg);
+                    left: 151px;
+                    top: -76px;
+                  }
+                }
+              }
+            }
+            &.pomeranc {
+              h2 {
+                bottom: -242px;
+                left: 50%;
+                transform: translateX(-57%);
+                span {
+                  &:first-child {
+                    transform: rotate(345deg);
+                    left: -50px;
+                  }
+                  &:nth-child(2) {
+                    transform: rotate(7deg);
+                    left: 269px;
+                    top: -77px;
+                  }
+                  &:last-child {
+                    transform: rotate(355deg);
+                    left: 106px;
+                    top: -102px;
+                  }
+                }
+              }
+            }
+            &.malina {
+              h2 {
+                bottom: -242px;
+                left: 50%;
+                transform: translateX(-57%);
+                span {
+                  &:first-child {
+                    transform: rotate(15deg);
+                    left: -50px;
+                    top: 30px;
+                  }
+                  &:nth-child(2) {
+                    transform: rotate(353deg);
+                    left: 96px;
+                    top: -108px;
+                  }
+                  &:last-child {
+                    left: 168px;
+                    top: -131px;
+                  }
+                }
+              }
+            }
+            img {
+              transition: 0.3s transform;
+              width: auto;
+              height: 100%;
+              max-height: 595px;
+            }
+          }
+        }
+        .owl-nav {
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          z-index: 100;
+        }
+      }
+    }
+  }
+  #capsule {
+    background-color: $capsuleBackground;
+    * {
+      color: white;
+    }
+    .inner-section-wrapper {
+      padding: 66px 54px;
+      nav {
+        h3 {
+          font-size: 28px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  #effect {
+    background-color: $effectBackground;
+    * {
+      color: $effectColor;
+    }
+    .inner-section-wrapper {
+      padding: 78px 54px;
+      nav {
+        h3 {
+          font-size: 28px;
+          font-weight: bold;
+        }
+      }
+      .main {
+        h1 {
+          font: normal normal bold 85px/146px Wallop;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+
+  #stores {
+    background-color: $storesBackground;
+    * {
+      color: $storesColor;
+    }
+    .inner-section-wrapper {
+      padding: 73px 54px;
+      nav {
+        h3 {
+          font-size: 28px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  footer {
+    background-color: $footerBackground;
+    * {
+      color: white;
+    }
+    .inner-footer-wrapper {
+      padding: 40px 56px 39px 48px;
+      display: flex;
+      justify-content: space-between;
+      .left-footer-side {
+        display: flex;
+        h4 {
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
