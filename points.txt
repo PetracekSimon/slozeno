@@ -1,0 +1,33 @@
+
+                                    <circle class="point" id="Ellipse_338" data-name="Ellipse 338" cx="7.5" cy="7.5"
+                                        r="7.5" transform="translate(844 4368)" fill="#006450" />
+                                    <circle class="point" id="Ellipse_345" data-name="Ellipse 345" cx="7.5" cy="7.5"
+                                        r="7.5" transform="translate(840 4351)" fill="#006450" />
+                                    <circle class="point" id="Ellipse_339" data-name="Ellipse 339" cx="7.5" cy="7.5"
+                                        r="7.5" transform="translate(780 4374)" fill="#006450" />
+                                    <circle class="point" id="Ellipse_340" data-name="Ellipse 340" cx="7.5" cy="7.5"
+                                        r="7.5" transform="translate(824 4279)" fill="#006450" />
+                                    <text id="_18" data-name="18" transform="translate(810 4281) rotate(-20)" fill="#006450"
+                                        font-size="15" font-family="Helvetica-Bold, Helvetica" font-weight="700"
+                                        opacity="0.9">
+                                        <tspan x="0" y="0">tady!</tspan>
+                                    </text>
+
+                                    <circle class="point" id="Ellipse_347" data-name="Ellipse 347" cx="7.5" cy="7.5"
+                                        r="7.5" transform="translate(1080 4303)" fill="#006450" />
+                                    <text id="_18" data-name="18" transform="translate(1066 4305) rotate(-20)" fill="#006450"
+                                        font-size="15" font-family="Helvetica-Bold, Helvetica" font-weight="700"
+                                        opacity="0.9">
+                                        <tspan x="0" y="0">tady!</tspan>
+                                    </text>
+
+                                    <circle class="point" id="Ellipse_341" data-name="Ellipse 341" cx="7.5" cy="7.5"
+                                        r="7.5" transform="translate(907 4284)" fill="#006450" />
+                                    <circle class="point" id="Ellipse_342" data-name="Ellipse 342" cx="7.5" cy="7.5"
+                                        r="7.5" transform="translate(902 4477)" fill="#006450" />
+                                    <circle class="point" id="Ellipse_343" data-name="Ellipse 343" cx="7.5" cy="7.5"
+                                        r="7.5" transform="translate(866 4543)" fill="#006450" />
+                                    <circle class="point" id="Ellipse_346" data-name="Ellipse 346" cx="7.5" cy="7.5"
+                                        r="7.5" transform="translate(862 4525)" fill="#006450" />
+                                    <circle class="point" id="Ellipse_344" data-name="Ellipse 344" cx="7.5" cy="7.5"
+                                        r="7.5" transform="translate(567 4362)" fill="#006450" />

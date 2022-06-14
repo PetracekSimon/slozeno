@@ -1,4 +1,7 @@
 @import "./helpers/style-helper.scss";
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   padding: 0;
@@ -18,7 +21,9 @@ body {
     height: 100vh;
   }
   #home {
+    position: relative;
     background-color: $homeBackground;
+    overflow: hidden;
     * {
       color: $homeColor;
     }
@@ -30,6 +35,13 @@ body {
       justify-content: space-between;
       position: relative;
       overflow: hidden;
+      .link-wrapper {
+        span {
+          text-decoration: underline;
+          font: normal normal medium 20px/329px Wallop;
+          cursor: pointer;
+        }
+      }
       img.can {
         position: absolute;
         &#oranzova {
@@ -74,6 +86,39 @@ body {
         }
       }
     }
+    .about-page {
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      z-index: 100;
+      background: white;
+      transition: .6s all;
+      .inner-section-wrapper {
+        & > div {
+          .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 31px;
+            h1 {
+              font: normal normal bold 80px/80px Wallop;
+              color: $storesColor;
+            }
+            span {
+              color: $storesColor;
+              text-decoration: underline;
+              font: normal normal medium 20px/329px Wallop;
+              cursor: pointer;
+            }
+          }
+          p {
+            color: $storesColor;
+            max-width: 409px;
+          }
+        }
+      }
+    }
   }
   .section-divider {
     font-weight: bold;
@@ -100,7 +145,7 @@ body {
     }
   }
   #powder {
-    transition: 0.3s all;
+    transition: 1s all;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,6 +153,12 @@ body {
       background-color: $powderOrangeBackground;
       * {
         color: $powderOrangeColor;
+      }
+      .owl-nav {
+        img {
+          filter: brightness(0) saturate(100%) invert(65%) sepia(85%)
+            saturate(618%) hue-rotate(2deg) brightness(108%) contrast(103%);
+        }
       }
     }
     &.kiwi {
@@ -120,6 +171,12 @@ body {
       background-color: $powderRaspberryBackground;
       * {
         color: $powderRaspberryColor;
+      }
+      .owl-nav {
+        img {
+          filter: brightness(0) saturate(100%) invert(95%) sepia(24%)
+            saturate(2635%) hue-rotate(292deg) brightness(104%) contrast(121%);
+        }
       }
     }
     .inner-section-wrapper {
@@ -158,8 +215,7 @@ body {
             position: relative;
             h2 {
               opacity: 0;
-              transition: 0.3s opacity;
-              transition-delay: 0.3s;
+              transition: 1s opacity;
               position: absolute;
               bottom: -80px;
               font-size: 65px;
@@ -238,7 +294,7 @@ body {
               }
             }
             img {
-              transition: 0.3s transform;
+              transition: 1.2s transform;
               width: auto;
               height: 100%;
               max-height: 595px;
@@ -303,23 +359,22 @@ body {
           .bottom {
             display: flex;
             margin-top: 29px;
-            &>div{
-              &:first-child{
+            & > div {
+              &:first-child {
                 max-width: 402px;
                 width: 100%;
                 padding-right: 10px;
               }
-              &:last-child{
+              &:last-child {
                 display: flex;
                 align-items: flex-start;
-                span{
+                span {
                   padding-left: 12px;
                 }
-                img{
+                img {
                   display: block;
                   width: 40px;
                   height: 40px;
-
                 }
               }
             }
@@ -330,6 +385,7 @@ body {
   }
 
   #stores {
+    height: auto;
     background-color: $storesBackground;
     * {
       color: $storesColor;
@@ -340,6 +396,134 @@ body {
         h3 {
           font-size: 28px;
           font-weight: bold;
+        }
+      }
+      .main {
+        .where-to-buy-line {
+          display: flex;
+          align-items: flex-end;
+          margin-top: 56px;
+          margin-bottom: 101px;
+          img {
+            margin-left: 100px;
+          }
+          h1 {
+            font: normal normal bold 85px/85px Wallop;
+          }
+        }
+        .stores-wrapper {
+          display: flex;
+          justify-content: space-between;
+          .info-side {
+            h1 {
+              margin-bottom: 94px;
+              font: normal normal bold 85px/85px Wallop;
+            }
+            .tile-wrapper {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              .store-tile {
+                min-width: 184px;
+                margin-bottom: 37px;
+                width: 50%;
+                padding: 15px;
+                &.active {
+                  background-color: white;
+                }
+              }
+            }
+          }
+        }
+        .clickable-area {
+          max-width: 833px;
+          max-height: 606px;
+          position: sticky;
+          top: 20px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          .point-wrapper {
+            cursor: pointer;
+            &:hover .point-text {
+              opacity: 1;
+            }
+            &:hover .point {
+              fill: red;
+            }
+            .point {
+              transition: 0.3s all;
+            }
+            .point-text {
+              transition: 0.5s all;
+              opacity: 0;
+            }
+          }
+          //sedm
+          #Ellipse_340 {
+          }
+          //první dva
+          #Ellipse_345 {
+          }
+          //druhá dva
+          #Ellipse_338 {
+          }
+          //pět
+          #Ellipse_339 {
+          }
+          //čtrnáct
+          #Ellipse_347 {
+          }
+          //osm
+          #Ellipse_341 {
+          }
+          //jedenáct
+          #Ellipse_342 {
+          }
+          //první čtyři
+          #Ellipse_343 {
+          }
+          //druhá čtyři
+          #Ellipse_346 {
+          }
+          //sedmnáct
+          #Ellipse_344 {
+          }
+          .clickable-grid {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            .point {
+              position: relative;
+              background-color: red;
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+              cursor: pointer;
+            }
+            #seven {
+              left: 41.5%;
+              top: 28.5%;
+            }
+            #eight {
+              left: 51.5%;
+              top: 26.5%;
+            }
+            #fourteen {
+              left: 72%;
+              top: 27%;
+            }
+            #seventeen {
+              left: 10.6%;
+              top: 34.4%;
+            }
+            #five {
+              left: 36.1%;
+              top: 33.7%;
+            }
+          }
         }
       }
     }

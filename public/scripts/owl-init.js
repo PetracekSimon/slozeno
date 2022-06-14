@@ -3,14 +3,22 @@ $(document).ready(function () {
   let owl = $(".owl-carousel").owlCarousel({
     items: 1,
     stagePadding: 250,
+    smartSpeed: 1000,
     center: true,
     startPosition: 1,
     loop: true,
     nav: true,
-    
-    navText: ["<img src='./public/imgs/carousel/arrow-left.svg'>","<img src='./public/imgs/carousel/arrow-right.svg'>"]
+
+    navText: [
+      "<img src='./public/imgs/carousel/arrow-left.svg'>",
+      "<img src='./public/imgs/carousel/arrow-right.svg'>",
+    ],
   });
   owl.on("changed.owl.carousel", function (event) {
+    if (event.type === "changed") {
+      console.log("yayy");
+      console.log(event)
+    }
     switch (event.page.index) {
       case 0:
         powder.className = "";
