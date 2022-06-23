@@ -41,7 +41,11 @@
                     <div>
                         <div class="nav">
                             <h1>Složeno:</h1>
-                            <span id="aboutCloseBtn">Zpět</span>
+                            <div class="right-wrapper">
+                                <img src="./public/imgs/fb-green.svg" alt="">
+                                <img src="./public/imgs/ig-green.svg" alt="">
+                                <span id="aboutCloseBtn">Zpět</span>
+                            </div>
                         </div>
                         <p>
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam eget nisl. Nunc auctor.
@@ -51,6 +55,19 @@
                             sapien. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
                             minus id
                         </p>
+                    </div>
+                    <div class="about-carousel">
+                        <div><img src="./public/imgs/about/5.png" alt=""></div>
+                        <div><img src="./public/imgs/about/1.png" alt=""></div>
+                        <div><img src="./public/imgs/about/2.png" alt=""></div>
+                        <div><img src="./public/imgs/about/3.png" alt=""></div>
+                        <div><img src="./public/imgs/about/4.png" alt=""></div>
+                        <div><img src="./public/imgs/about/4.png" alt=""></div>
+                        <div><img src="./public/imgs/about/4.png" alt=""></div>
+                        <div><img src="./public/imgs/about/4.png" alt=""></div>
+                        <div><img src="./public/imgs/about/4.png" alt=""></div>
+                        <div><img src="./public/imgs/about/4.png" alt=""></div>
+                        <div><img src="./public/imgs/about/4.png" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -115,25 +132,70 @@
                     </h3>
                 </nav>
                 <div class="main">
-                    <h1>
-                        <u>Kůže a pleť</u>
+                    <h1 class="effect-title">
+                        <span data-content-id="1" class="active">Kůže a pleť</span>
                         <br>
-                        Zdraví
+                        <span data-content-id="2">Zdraví</span>
                         <br>
-                        Hydratace
+                        <span data-content-id="3">Hydratace</span>
                         <br>
-                        Klouby
+                        <span data-content-id="4">Klouby</span>
                     </h1>
                     <div class="right-side">
-                        <img src="./public/imgs/effect/effect.png" alt="">
-                        <div class="bottom">
-                            <div>
-                                Popis výrobku: Kolagen Složeno: je založený na kombinaci patentovaných bioaktivních
-                                kolagenních peptidů, které jsou vyráběny
+                        <div class="content content-1 active">
+                            <img src="./public/imgs/effect/effect.png" alt="">
+                            <div class="bottom">
+                                <div>
+                                    1 Popis výrobku: Kolagen Složeno: je založený na kombinaci patentovaných
+                                    bioaktivních
+                                    kolagenních peptidů, které jsou vyráběny
+                                </div>
+                                <div>
+                                    <img src="./public/imgs/effect/pill.png" alt="">
+                                    <span>Doporučujeme Kolagen v kapslích</span>
+                                </div>
                             </div>
-                            <div>
-                                <img src="./public/imgs/effect/pill.png" alt="">
-                                <span>Doporučujeme Kolagen v kapslích</span>
+                        </div>
+                        <div class="content content-2">
+                            <img src="./public/imgs/effect/effect.png" alt="">
+                            <div class="bottom">
+                                <div>
+                                    2 Popis výrobku: Kolagen Složeno: je založený na kombinaci patentovaných
+                                    bioaktivních
+                                    kolagenních peptidů, které jsou vyráběny
+                                </div>
+                                <div>
+                                    <img src="./public/imgs/effect/pill.png" alt="">
+                                    <span>Doporučujeme Kolagen v kapslích</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content content-3">
+                            <img src="./public/imgs/effect/effect.png" alt="">
+                            <div class="bottom">
+                                <div>
+                                    3 Popis výrobku: Kolagen Složeno: je založený na kombinaci patentovaných
+                                    bioaktivních
+                                    kolagenních peptidů, které jsou vyráběny
+                                </div>
+                                <div>
+                                    <img src="./public/imgs/effect/pill.png" alt="">
+                                    <span>Doporučujeme Kolagen v kapslích</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content content-4">
+                            <img src="./public/imgs/effect/effect.png" alt="">
+                            <div class="bottom">
+                                <div>
+                                    4 Popis výrobku: Kolagen Složeno: je založený na kombinaci patentovaných
+                                    bioaktivních
+                                    kolagenních peptidů, které jsou vyráběny
+                                </div>
+                                <div>
+                                    <img src="./public/imgs/effect/pill.png" alt="">
+                                    <span>Doporučujeme Kolagen v kapslích</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1604,6 +1666,14 @@
                     <div>
                         <img src="./public/imgs/logo-white.png" alt="">
                     </div>
+                    <div class="phone-only">
+                        <a href="mailto:obchod@slozeno.cz">obchod@slozeno.cz</a>
+                        <a href="tel:+420800203209">+420 800 203 209</a>
+                        <div class="icons">
+                            <img src="/public/imgs/facebook.svg" alt="">
+                            <img src="/public/imgs/instagram.svg" alt="">
+                        </div>
+                    </div>
                     <div>
                         <h4>Výdej a centrála</h4>
                         <ul>
@@ -1638,7 +1708,7 @@
         <script src="./public/owlcarousel/owl.carousel.min.js"></script>
         <script src="./public/scripts/owl-init.js"></script>
         <script src="./public/scripts/main.js"></script>
-        <!-- <script src="./public/scripts/animate.js"></script> -->
+        <script src="./public/scripts/animate.js"></script>
     </body>
 
 </html>

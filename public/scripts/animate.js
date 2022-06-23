@@ -1,9 +1,25 @@
-$(document).ready(function () {
-  animateDiv($("#modra"), 0.1);
-  animateDiv($("#cervena"), 0.2);
-  animateDiv($("#oranzova"), 0.3);
-  animateDiv($("#zelena"), 0.15);
-});
+document
+  .querySelector("#modra")
+  .addEventListener("mouseenter", () =>
+    document.querySelector("#modra").classList.add("floating")
+  );
+document
+  .querySelector("#modra")
+  .addEventListener("mouseleave", () =>
+    document.querySelector("#modra").classList.remove("floating")
+  );
+document
+  .querySelector("#cervena")
+  .addEventListener("mouseenter", () =>
+    document.querySelector("#cervena").classList.add("floating")
+  );
+document
+  .querySelector("#cervena")
+  .addEventListener("mouseleave", () =>
+    document.querySelector("#cervena").classList.remove("floating")
+  );
+
+function animateBlueCan() {}
 
 function makeNewPosition($container) {
   // Get viewport dimensions (remove the dimension of the div)
@@ -20,7 +36,6 @@ function animateDiv($target, speedModifier) {
   var newq = makeNewPosition($target.parent());
   var oldq = $target.offset();
   var speed = calcSpeed([oldq.top, oldq.left], newq);
-
 
   $target.animate(
     {

@@ -44,4 +44,38 @@ $(document).ready(function () {
         break;
     }
   });
+  let displayedItems = 4;
+  let owlAbout = $(".about-carousel").owlCarousel({
+    items: 4,
+    dots: false,
+    navText: [
+      "<img class='about-prev-btn' src='./public/imgs/carousel/arrow-left.svg'>",
+      "<img class='about-next-btn' src='./public/imgs/carousel/arrow-right.svg'>",
+    ],
+    onInitialized: () => {
+      document
+        .querySelector(".about-carousel .owl-prev")
+        .classList.add("d-none");
+    },
+  });
+  owlAbout.on("changed.owl.carousel", (event) => {
+    if (event.item.index == 0) {
+      document
+        .querySelector(".about-carousel .owl-prev")
+        .classList.add("d-none");
+    } else {
+      document
+        .querySelector(".about-carousel .owl-prev")
+        .classList.remove("d-none");
+    }
+    if (event.item.index == event.item.count - displayedItems) {
+      document
+        .querySelector(".about-carousel .owl-next")
+        .classList.add("d-none");
+    } else {
+      document
+        .querySelector(".about-carousel .owl-next")
+        .classList.remove("d-none");
+    }
+  });
 });
