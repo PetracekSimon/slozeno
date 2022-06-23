@@ -56,3 +56,15 @@ aboutCloseBtn.addEventListener("click", () =>{
   aboutSection.style.top = "100%";
   document.body.style.overflowY = "auto";
 });
+
+
+let effectTitles = document.querySelectorAll(".effect-title > span");
+
+effectTitles.forEach(title =>{
+  title.addEventListener("click", ()=>{
+    document.querySelector(".effect-title > span.active").classList.remove("active");
+    document.querySelector("#effect .right-side .content.active").classList.remove("active");
+    title.classList.add("active");
+    document.querySelector(`#effect .right-side .content.content-${title.dataset.contentId}`).classList.add("active");
+  })
+})
