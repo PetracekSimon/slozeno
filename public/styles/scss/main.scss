@@ -78,6 +78,7 @@ body {
       nav {
         display: flex;
         justify-content: space-between;
+        z-index: 1;
       }
       .main {
         text-align: center;
@@ -85,6 +86,10 @@ body {
         z-index: 3;
         h1 {
           font: normal normal bold 280px/357px Wallop;
+          @include mq(1150px) {
+            font: normal normal bold 110px/140px Wallop;
+            transform: matrix(0.64, -0.77, 0.77, 0.64, 0, 0);
+          }
         }
       }
     }
@@ -96,17 +101,59 @@ body {
       z-index: 100;
       background: white;
       transition: 0.6s all;
+      .circle-wrapper {
+        position: absolute;
+        right: 95px;
+        bottom: 95px;
+        z-index: 10;
+        @include mq(500px) {
+          display: none;
+        }
+        img {
+          animation-name: rotateCircle;
+          animation-duration: 7s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+      }
       .inner-section-wrapper {
         padding: 30px 54px 55px;
+        @include mq(500px) {
+          padding: 26px;
+        }
+        overflow-y: auto;
+        .circle-wrapper-phone {
+          margin-bottom: -82px;
+          z-index: 10;
+          @include mq(500px, min) {
+            display: none;
+          }
+          img {
+            width: 100%;
+            animation-name: rotateCircle;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+          }
+        }
         & > div {
+          &:first-child {
+            @include mq(500px) {
+              margin-bottom: 31px;
+            }
+          }
           .nav {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
             margin-bottom: 31px;
+
             .right-wrapper {
               display: flex;
               align-items: center;
+              @include mq(640px) {
+                display: none;
+              }
               img {
                 width: 40px;
                 margin-right: 15px;
@@ -115,6 +162,15 @@ body {
             h1 {
               font: normal normal bold 80px/80px Wallop;
               color: $storesColor;
+              @include mq(640px) {
+                font: normal normal bold 69px/69px Wallop;
+              }
+              p {
+                font-size: 23px;
+                @include mq(640px) {
+                  display: none;
+                }
+              }
             }
             span {
               color: $storesColor;
@@ -131,9 +187,9 @@ body {
         .about-carousel {
           .owl-stage {
             display: flex;
-            .owl-item{
+            .owl-item {
               margin: 10px;
-              img{
+              img {
                 width: 100%;
               }
             }
@@ -163,8 +219,6 @@ body {
             }
           }
         }
-
-
       }
     }
   }
@@ -198,6 +252,85 @@ body {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    position: relative;
+    #powderDetailWindowTransparentLeft {
+      left: 0;
+      height: 100vh;
+      width: calc(100vw - 481px);
+      position: absolute;
+      z-index: 100;
+      background: transparent;
+      transform: translateX(calc(-100vw + 481px));
+      &.open{
+        transform: translateX(0);
+      }
+    }
+    #powderDetailWindow {
+      overflow: auto;
+      height: 100vh;
+      width: 464px;
+      max-width: 100%;
+      position: absolute;
+      z-index: 100;
+      background: white;
+      transition: 0.6s all;
+      right: 0;
+      transform: translate(464px);
+      padding: 50px;
+      &.open{
+        transform: translate(0);
+        
+      }
+      .content:not(.display){
+        display: none;
+      }
+      .detail-header {
+        display: flex;
+        justify-content: space-between;
+        .close-detail-btn{
+          cursor: pointer;
+        }
+        h3 {
+          font: normal normal bold 40px/45px Wallop;
+          color: #323232;
+          margin-bottom: 18px;
+        }
+      }
+      p.info {
+        color: #46be50;
+        display: flex;
+        align-items: center;
+        font: normal normal bold 16px/22px Wallop;
+        margin-bottom: 17px;
+        img {
+          margin-right: 11px;
+        }
+      }
+      p {
+        color: #323232;
+        font: normal normal medium 16px/22px Wallop;
+        margin-bottom: 54px;
+      }
+      table * {
+        color: #323232;
+        font-size: 10px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        td {
+          border: 1px solid black;
+          padding: 5px;
+        }
+        thead {
+          font-style: italic;
+        }
+        tbody {
+          font-weight: bold;
+        }
+      }
+    }
+
     &.orange {
       background-color: $powderOrangeBackground;
       * {
@@ -265,6 +398,9 @@ body {
             flex-direction: column;
             align-items: center;
             position: relative;
+            #productPhoto{
+              cursor: pointer;
+            }
             h2 {
               opacity: 0;
               transition: 1s opacity;
@@ -457,6 +593,7 @@ body {
           }
         }
         .right-side {
+          margin-right: 20px;
           @include mq(600px) {
             display: none;
           }
@@ -762,17 +899,30 @@ body {
   }
 }
 
-
-
-.floating { 
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
- 
+
 @keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
-    100%   { transform: translate(0, -0px); }   
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

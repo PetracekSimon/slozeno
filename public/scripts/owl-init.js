@@ -44,10 +44,34 @@ $(document).ready(function () {
         break;
     }
   });
-  let displayedItems = 4;
+  let displayedItems = 0;
+  if (window.innerWidth > 1050) {
+    displayedItems = 4;
+  } else if (window.innerWidth > 750) {
+    displayedItems = 3;
+  } else if (window.innerWidth > 500) {
+    displayedItems = 2;
+  } else {
+    displayedItems = 1;
+  }
+  console.log(displayedItems);
   let owlAbout = $(".about-carousel").owlCarousel({
-    items: 4,
+    items: 1,
     dots: false,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    responsive: {
+      1050: {
+        items: 4,
+      },
+      750: {
+        items: 3,
+      },
+      500: {
+        items: 2,
+      },
+    },
     navText: [
       "<img class='about-prev-btn' src='./public/imgs/carousel/arrow-left.svg'>",
       "<img class='about-next-btn' src='./public/imgs/carousel/arrow-right.svg'>",
