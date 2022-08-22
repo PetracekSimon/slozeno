@@ -421,6 +421,9 @@ body {
                 bottom: -242px;
                 left: 50%;
                 transform: translateX(-57%);
+                @include mq(600px){
+                  bottom: -300px;
+                }
                 span {
                   &:first-child {
                     transform: rotate(353deg);
@@ -444,6 +447,9 @@ body {
                 bottom: -242px;
                 left: 50%;
                 transform: translateX(-57%);
+                @include mq(600px){
+                  bottom: -300px;
+                }
                 span {
                   &:first-child {
                     transform: rotate(345deg);
@@ -467,6 +473,9 @@ body {
                 bottom: -242px;
                 left: 50%;
                 transform: translateX(-57%);
+                @include mq(600px){
+                  bottom: -300px;
+                }
                 span {
                   &:first-child {
                     transform: rotate(15deg);
@@ -500,6 +509,9 @@ body {
           justify-content: space-between;
           position: relative;
           z-index: 100;
+          @include mq(600px){
+            margin-top: 90px;
+          }
           @include mq(1180px, max) {
             img {
               width: 35px;
