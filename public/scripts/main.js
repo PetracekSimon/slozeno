@@ -63,11 +63,11 @@ closeAboutPage.addEventListener("click", () =>{
 });
 
 
-let effectTitles = document.querySelectorAll(".effect-title > span");
+let effectTitles = document.querySelectorAll(".effect-title > div");
 
 effectTitles.forEach(title =>{
   title.addEventListener("click", ()=>{
-    document.querySelector(".effect-title > span.active").classList.remove("active");
+    document.querySelector(".effect-title > div.active").classList.remove("active");
     document.querySelector("#effect .right-side .content.active").classList.remove("active");
     title.classList.add("active");
     document.querySelector(`#effect .right-side .content.content-${title.dataset.contentId}`).classList.add("active");

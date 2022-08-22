@@ -37,7 +37,7 @@ body {
       justify-content: space-between;
       position: relative;
       overflow: hidden;
-      .home-footer{
+      .home-footer {
         z-index: 10;
       }
       .link-wrapper {
@@ -91,7 +91,7 @@ body {
           @include mq(500px) {
             top: 201px;
             width: 300px;
-            left: 22%
+            left: 22%;
           }
         }
       }
@@ -602,10 +602,40 @@ body {
         h1 {
           font: normal normal bold 85px/146px Wallop;
           line-height: 1.4;
-          span {
+          div {
             cursor: pointer;
+            .content {
+              display: none;
+            }
             &.active {
-              text-decoration: underline;
+              span {
+                text-decoration: underline;
+              }
+              .content {
+                display: block;
+                @include mq(600px, min) {
+                  display: none;
+                }
+                margin-top: 20px;
+                margin-bottom: 35px;
+                p {
+                  font-size: 16px;
+                  font-weight: normal;
+                }
+                img {
+                  width: 100%;
+                }
+                .recomended {
+                  margin-top: 30px;
+                  display: flex;
+                  align-items: center;
+                  img {
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 11px;
+                  }
+                }
+              }
             }
           }
           @include mq(600px) {
@@ -639,6 +669,9 @@ body {
           margin-right: 20px;
           @include mq(600px) {
             display: none;
+          }
+          img{
+            width: 100%;
           }
           max-width: 676px;
           .content:not(.active) {
