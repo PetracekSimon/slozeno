@@ -22,10 +22,6 @@ $(document).ready(function () {
     ],
   });
   owl.on("changed.owl.carousel", function (event) {
-    if (event.type === "changed") {
-      console.log("yayy");
-      console.log(event);
-    }
     switch (event.page.index) {
       case 0:
         powder.className = "";
@@ -54,7 +50,6 @@ $(document).ready(function () {
   } else {
     displayedItems = 1;
   }
-  console.log(displayedItems);
   let owlAbout = $(".about-carousel").owlCarousel({
     items: 1,
     dots: false,

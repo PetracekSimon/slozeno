@@ -2007,7 +2007,6 @@
                 }
                 elementArr.forEach(element => {
                     element.addEventListener("mousedown", () => {
-                        console.log("mousedown");
                         element.addEventListener("mousemove", checkMove)
                     });
                     element.addEventListener("mouseup", () => {
@@ -2015,7 +2014,6 @@
                         if (!moved) {
                             openProductDetail(element.dataset.name)
                         } else {
-                            console.log('no action');
                             moved = false;
                         }
                     });
@@ -2034,7 +2032,6 @@
                     powderDetailWindow.classList.add("open");
                     powderDetailWindowTransparentLeft.classList.add("open");
                     powderDetailWindowContent.forEach(content => {
-                        console.log(content.classList, name);
                         if (content.classList.contains(name)) {
                             content.classList.add("display")
                         } else {
