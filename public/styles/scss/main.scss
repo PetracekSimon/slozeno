@@ -38,6 +38,8 @@ body {
       position: relative;
       overflow: hidden;
       .link-wrapper {
+        display: flex;
+        align-items: center;
         span {
           text-decoration: underline;
           font: normal normal medium 20px/329px Wallop;
@@ -101,6 +103,16 @@ body {
       z-index: 100;
       background: white;
       transition: 0.6s all;
+      #closeAboutPage {
+        width: 24px;
+        position: absolute;
+        right: 26px;
+        top: 26px;
+        z-index: 10000;
+        @include mq(500px, min) {
+          display: none;
+        }
+      }
       .circle-wrapper {
         position: absolute;
         right: 95px;
@@ -185,7 +197,7 @@ body {
           }
         }
         .about-carousel {
-          @include mq(500px){
+          @include mq(500px) {
             margin-bottom: 50px;
           }
           .owl-stage {
@@ -264,7 +276,7 @@ body {
       z-index: 100;
       background: transparent;
       transform: translateX(calc(-100vw + 481px));
-      &.open{
+      &.open {
         transform: translateX(0);
       }
     }
@@ -280,17 +292,16 @@ body {
       right: 0;
       transform: translate(464px);
       padding: 50px;
-      &.open{
+      &.open {
         transform: translate(0);
-        
       }
-      .content:not(.display){
+      .content:not(.display) {
         display: none;
       }
       .detail-header {
         display: flex;
         justify-content: space-between;
-        .close-detail-btn{
+        .close-detail-btn {
           cursor: pointer;
         }
         h3 {
@@ -401,7 +412,7 @@ body {
             flex-direction: column;
             align-items: center;
             position: relative;
-            #productPhoto{
+            #productPhoto {
               cursor: pointer;
             }
             h2 {
@@ -424,7 +435,7 @@ body {
                 bottom: -242px;
                 left: 50%;
                 transform: translateX(-57%);
-                @include mq(600px){
+                @include mq(600px) {
                   bottom: -300px;
                 }
                 span {
@@ -450,7 +461,7 @@ body {
                 bottom: -242px;
                 left: 50%;
                 transform: translateX(-57%);
-                @include mq(600px){
+                @include mq(600px) {
                   bottom: -300px;
                 }
                 span {
@@ -476,7 +487,7 @@ body {
                 bottom: -242px;
                 left: 50%;
                 transform: translateX(-57%);
-                @include mq(600px){
+                @include mq(600px) {
                   bottom: -300px;
                 }
                 span {
@@ -512,7 +523,7 @@ body {
           justify-content: space-between;
           position: relative;
           z-index: 100;
-          @include mq(600px){
+          @include mq(600px) {
             margin-top: 90px;
           }
           @include mq(1180px, max) {

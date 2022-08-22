@@ -47,12 +47,17 @@ function getOnlyDigits(str) {
 
 let moreAbout = document.querySelector(".link-wrapper span");
 let aboutCloseBtn = document.querySelector("#aboutCloseBtn");
+let closeAboutPage = document.querySelector("#closeAboutPage");
 let aboutSection = document.querySelector(".about-page");
 moreAbout.addEventListener("click", () =>{
   aboutSection.style.top = "0";
   document.body.style.overflowY = "hidden";
 });
 aboutCloseBtn.addEventListener("click", () =>{
+  aboutSection.style.top = "100%";
+  document.body.style.overflowY = "auto";
+});
+closeAboutPage.addEventListener("click", () =>{
   aboutSection.style.top = "100%";
   document.body.style.overflowY = "auto";
 });
