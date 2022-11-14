@@ -804,9 +804,6 @@ body {
                 &:hover .point {
                   fill: red;
                 }
-                .point {
-                  transition: 0.3s all;
-                }
                 .point-text {
                   transition: 0.5s all;
                   opacity: 0;
@@ -849,9 +846,6 @@ body {
             }
             &:hover .point {
               fill: red;
-            }
-            .point {
-              transition: 0.3s all;
             }
             .point-text {
               transition: 0.5s all;
