@@ -572,7 +572,10 @@ body {
         justify-content: center;
         align-items: center;
         height: 100%;
-        padding-top: 83px;
+        video {
+          max-width: 1420.3px;
+          width: 100%;
+        }
       }
     }
   }
@@ -670,7 +673,7 @@ body {
           @include mq(600px) {
             display: none;
           }
-          img{
+          img {
             width: 100%;
           }
           max-width: 676px;
@@ -997,7 +1000,7 @@ body {
   }
 }
 
-#dafitLogo{
+#dafitLogo {
   max-width: 250px;
   width: 100%;
 }
