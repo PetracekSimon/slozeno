@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../helpers/style-helper.scss"
-    ],
-    "names": [],
-    "file": "style-helper.min.css"
-}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"style-helper.min.css"}
